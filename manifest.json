@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Colonist Log Saver",
+  "version": "1.0.0",
+  "description": "colonist.io のゲームログ（仮想スクロールで消えるものも含む）を全部収集して保存する",
+  "content_scripts": [
+    {
+      "matches": ["https://colonist.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
