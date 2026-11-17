@@ -162,7 +162,7 @@
   function rolls() {
     const out = [];
     sorted().forEach((e) => {
-      const m = e.text.match(/^(.*?)\s*巻き\s*🎲(\d)\s*🎲(\d)/);
+      const m = e.text.match(/^(.*?)\s*(?:巻き|rolled)\s*🎲(\d)\s*🎲(\d)/);
       if (m) out.push({ who: m[1], sum: Number(m[2]) + Number(m[3]) });
     });
     return out;
